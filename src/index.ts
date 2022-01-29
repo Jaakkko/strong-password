@@ -1,6 +1,3 @@
-import sourceMapSupport from 'source-map-support'
-sourceMapSupport.install()
-
 export function containsLowerAndUpperCaseLetters(password: string): boolean {
   let lower = false
   let upper = false
@@ -17,6 +14,15 @@ export function containsLowerAndUpperCaseLetters(password: string): boolean {
     }
   }
 
+  return false
+}
+
+export function containsAtleastOneNumber(password: string): boolean {
+  for (const char of password) {
+    if ('0' <= char && char <= '9') {
+      return true
+    }
+  }
   return false
 }
 
